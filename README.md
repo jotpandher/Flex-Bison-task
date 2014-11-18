@@ -1,5 +1,5 @@
 Flex-Bison-task
 ===============
 To compile the code run the following commands:
-bash task.sh
+<b>bash task.sh</b>
 ./pro
