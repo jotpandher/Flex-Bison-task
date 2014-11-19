@@ -27,5 +27,5 @@ z+{nodes}+	{yylval.znodes = strdup(yytext);
 			return beamx; }
 {beamy}+	{yylval.beamy = strdup(yytext);
 			return beamy; }
-.		;
+.							;
 
