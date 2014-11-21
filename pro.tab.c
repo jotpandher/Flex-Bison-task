@@ -64,6 +64,7 @@
 /* Copy the first part of user declarations.  */
 #line 1 "pro.y" /* yacc.c:339  */
 
+#include <cstdio>
 #include<iostream>
 #include <fstream>
 using namespace std;
@@ -75,7 +76,7 @@ extern "C" FILE *yyin;
 void yyerror(const char *s);
 #define YYDEBUG 1
 
-#line 79 "pro.tab.c" /* yacc.c:339  */
+#line 80 "pro.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -120,7 +121,7 @@ extern int yydebug;
 typedef union YYSTYPE YYSTYPE;
 union YYSTYPE
 {
-#line 14 "pro.y" /* yacc.c:355  */
+#line 15 "pro.y" /* yacc.c:355  */
 
 	float xnodes;
 	float ynodes;
@@ -128,7 +129,7 @@ union YYSTYPE
 	float beamx;
 	float beamy;
 
-#line 132 "pro.tab.c" /* yacc.c:355  */
+#line 133 "pro.tab.c" /* yacc.c:355  */
 };
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
@@ -143,7 +144,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 147 "pro.tab.c" /* yacc.c:358  */
+#line 148 "pro.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -441,8 +442,8 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    28,    28,    29,    30,    31,    32,    33,    34,    35,
-      36,    37
+       0,    29,    29,    30,    31,    32,    33,    34,    35,    36,
+      37,    38
 };
 #endif
 
@@ -1215,67 +1216,67 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 28 "pro.y" /* yacc.c:1646  */
+#line 29 "pro.y" /* yacc.c:1646  */
     {cout<<"jot"<<endl; }
-#line 1221 "pro.tab.c" /* yacc.c:1646  */
+#line 1222 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
-#line 29 "pro.y" /* yacc.c:1646  */
+#line 30 "pro.y" /* yacc.c:1646  */
     { cout<<""<<endl; }
-#line 1227 "pro.tab.c" /* yacc.c:1646  */
+#line 1228 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 30 "pro.y" /* yacc.c:1646  */
+#line 31 "pro.y" /* yacc.c:1646  */
     { cout<<""<<endl;}
-#line 1233 "pro.tab.c" /* yacc.c:1646  */
+#line 1234 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 31 "pro.y" /* yacc.c:1646  */
+#line 32 "pro.y" /* yacc.c:1646  */
     { cout<< ""<<endl;}
-#line 1239 "pro.tab.c" /* yacc.c:1646  */
+#line 1240 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 32 "pro.y" /* yacc.c:1646  */
+#line 33 "pro.y" /* yacc.c:1646  */
     {cout <<"" <<endl;}
-#line 1245 "pro.tab.c" /* yacc.c:1646  */
+#line 1246 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 33 "pro.y" /* yacc.c:1646  */
+#line 34 "pro.y" /* yacc.c:1646  */
     { cout<< ""<<endl;}
-#line 1251 "pro.tab.c" /* yacc.c:1646  */
+#line 1252 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 34 "pro.y" /* yacc.c:1646  */
+#line 35 "pro.y" /* yacc.c:1646  */
     { cout<<""<<endl;}
-#line 1257 "pro.tab.c" /* yacc.c:1646  */
+#line 1258 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 35 "pro.y" /* yacc.c:1646  */
+#line 36 "pro.y" /* yacc.c:1646  */
     {cout<<""<<endl;}
-#line 1263 "pro.tab.c" /* yacc.c:1646  */
+#line 1264 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 36 "pro.y" /* yacc.c:1646  */
+#line 37 "pro.y" /* yacc.c:1646  */
     { cout<<""<<endl;}
-#line 1269 "pro.tab.c" /* yacc.c:1646  */
+#line 1270 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 37 "pro.y" /* yacc.c:1646  */
+#line 38 "pro.y" /* yacc.c:1646  */
     { cout<< ""<<endl;}
-#line 1275 "pro.tab.c" /* yacc.c:1646  */
+#line 1276 "pro.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1279 "pro.tab.c" /* yacc.c:1646  */
+#line 1280 "pro.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1503,20 +1504,25 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 39 "pro.y" /* yacc.c:1906  */
+#line 40 "pro.y" /* yacc.c:1906  */
 
 
-int main()
+main()
 {
  FILE *text= fopen("beam.flt", "r");
- 	yyin = text; 
- 	yylex();
-}
+ 	if (!text) {
+		cout << "I can't open a.snazzle.file!" << endl;
+		return -1;
+	}
+
+        yyin = text; 
+
 
 	do{
-//		yydebug = 1;
+		yydebug = 1;
 		yyparse();
-	} 
+	} while (!feof(yyin));
+}
 
 void yyerror(const char *s) {
 cout << "Parser error! Message: " << s << endl;

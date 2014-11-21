@@ -1,4 +1,6 @@
+bison -d pro.y
 flex pro.l
-g++ lex.yy.c -lfl -o pro
+g++ pro.tab.c lex.yy.c -lfl -o pro
+               
 
 
