@@ -94,7 +94,10 @@ void yyerror(const char *s);
 # define YYERROR_VERBOSE 0
 #endif
 
-
+/* In a future release of Bison, this section will be replaced
+   by #include "pro.tab.h".  */
+#ifndef YY_YY_PRO_TAB_H_INCLUDED
+# define YY_YY_PRO_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -129,7 +132,7 @@ union YYSTYPE
 	float beamx;
 	float beamy;
 
-#line 133 "pro.tab.c" /* yacc.c:355  */
+#line 136 "pro.tab.c" /* yacc.c:355  */
 };
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
@@ -140,11 +143,11 @@ extern YYSTYPE yylval;
 
 int yyparse (void);
 
-
+#endif /* !YY_YY_PRO_TAB_H_INCLUDED  */
 
 /* Copy the second part of user declarations.  */
 
-#line 148 "pro.tab.c" /* yacc.c:358  */
+#line 151 "pro.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -1218,65 +1221,65 @@ yyreduce:
         case 2:
 #line 29 "pro.y" /* yacc.c:1646  */
     {cout<<"jot"<<endl; }
-#line 1222 "pro.tab.c" /* yacc.c:1646  */
+#line 1225 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
 #line 30 "pro.y" /* yacc.c:1646  */
     { cout<<""<<endl; }
-#line 1228 "pro.tab.c" /* yacc.c:1646  */
+#line 1231 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
 #line 31 "pro.y" /* yacc.c:1646  */
     { cout<<""<<endl;}
-#line 1234 "pro.tab.c" /* yacc.c:1646  */
+#line 1237 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
 #line 32 "pro.y" /* yacc.c:1646  */
     { cout<< ""<<endl;}
-#line 1240 "pro.tab.c" /* yacc.c:1646  */
+#line 1243 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
 #line 33 "pro.y" /* yacc.c:1646  */
     {cout <<"" <<endl;}
-#line 1246 "pro.tab.c" /* yacc.c:1646  */
+#line 1249 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
 #line 34 "pro.y" /* yacc.c:1646  */
     { cout<< ""<<endl;}
-#line 1252 "pro.tab.c" /* yacc.c:1646  */
+#line 1255 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
 #line 35 "pro.y" /* yacc.c:1646  */
     { cout<<""<<endl;}
-#line 1258 "pro.tab.c" /* yacc.c:1646  */
+#line 1261 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
 #line 36 "pro.y" /* yacc.c:1646  */
     {cout<<""<<endl;}
-#line 1264 "pro.tab.c" /* yacc.c:1646  */
+#line 1267 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
 #line 37 "pro.y" /* yacc.c:1646  */
     { cout<<""<<endl;}
-#line 1270 "pro.tab.c" /* yacc.c:1646  */
+#line 1273 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
 #line 38 "pro.y" /* yacc.c:1646  */
     { cout<< ""<<endl;}
-#line 1276 "pro.tab.c" /* yacc.c:1646  */
+#line 1279 "pro.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1280 "pro.tab.c" /* yacc.c:1646  */
+#line 1283 "pro.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
