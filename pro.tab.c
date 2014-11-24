@@ -1522,7 +1522,7 @@ main()
 
 
 	do{
-		yydebug = 1;
+//		yydebug = 1;
 		yyparse();
 	} while (!feof(yyin));
 }
