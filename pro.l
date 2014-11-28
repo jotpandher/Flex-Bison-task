@@ -4,6 +4,7 @@
 using namespace std;
 #define YY_DECL extern "C" int yylex()
 #include "pro.tab.h"
+#include "writer.h"
 float splitnodex( string s )
 {
 	string delimiter = "= ";
@@ -85,6 +86,8 @@ beamy			[\n]*[,]+{digits}+[]]
 %%
 
 [ \n]
+{digits}	{yylval.srnum = atoi(yytext);
+			return srnum; }
 x{nodes}+	{ yylval.xnodes = splitnodex(yytext);
 			return xnodes; }
 y{nodes}+	{yylval.ynodes = splitnodey(yytext);
