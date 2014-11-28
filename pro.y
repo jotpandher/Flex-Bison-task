@@ -60,7 +60,11 @@ main()
 
 
 	do{
+<<<<<<< HEAD
 //	yydebug = 1;
+=======
+//		yydebug = 1;
+>>>>>>> 1f00b64ea815ee8d2e16b928b8cb8f4c458f568e
 		yyparse();
 	} while (!feof(yyin));
  	s.write_end_function("*", 70);
