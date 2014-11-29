@@ -76,7 +76,7 @@ extern "C" FILE *yyin;
 
 void yyerror(const char *s);
 #define YYDEBUG 1
-write_function s;
+//write_function s;
 
 #line 82 "pro.tab.c" /* yacc.c:339  */
 
@@ -1230,7 +1230,7 @@ yyreduce:
 
   case 3:
 #line 33 "pro.y" /* yacc.c:1646  */
-    {s.writeFeltFile_Joint_coordinates(float, char);}
+    {cout<<""<<endl; }
 #line 1235 "pro.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1266,7 +1266,7 @@ yyreduce:
 
   case 9:
 #line 40 "pro.y" /* yacc.c:1646  */
-    {s.writeFeltFile_Joint_coordinates(float, char);}
+    {cout<<""<<endl;}
 #line 1271 "pro.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1541,14 +1541,12 @@ main()
 
 
 	do{
-<<<<<<< HEAD
+
 //	yydebug = 1;
-=======
-//		yydebug = 1;
->>>>>>> 1f00b64ea815ee8d2e16b928b8cb8f4c458f568e
-		yyparse();
+
+	yyparse();
 	} while (!feof(yyin));
- 	s.write_end_function("*", 70);
+//	s.write_end_function("*", 70);
 
 }
 

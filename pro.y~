@@ -30,7 +30,7 @@ void yyerror(const char *s);
 
 FELT:
 	FELT srnum {cout<<"jot"<<endl;   } 
-	|FELT xnodes {cout<<""<<endl; }
+	|FELT xnodes {cout<<""<<Endl; }
 
 	| FELT ynodes { cout<<""<<endl; }
 	| FELT znodes { cout<<""<<endl;}

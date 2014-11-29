@@ -477,7 +477,6 @@ char *yytext;
 using namespace std;
 #define YY_DECL extern "C" int yylex()
 #include "pro.tab.h"
-#include "writer.h"
 float splitnodex( string s )
 {
 	string delimiter = "= ";
@@ -547,7 +546,7 @@ float splitbeamy( string s )
         return t;
 }
 
-#line 551 "lex.yy.c"
+#line 550 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -734,10 +733,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 86 "pro.l"
+#line 85 "pro.l"
 
 
-#line 741 "lex.yy.c"
+#line 740 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -823,57 +822,57 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 88 "pro.l"
+#line 87 "pro.l"
 
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 89 "pro.l"
+#line 88 "pro.l"
 {yylval.srnum = atoi(yytext);
 			return srnum; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 91 "pro.l"
+#line 90 "pro.l"
 { yylval.xnodes = splitnodex(yytext);
 			return xnodes; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 93 "pro.l"
+#line 92 "pro.l"
 {yylval.ynodes = splitnodey(yytext);
 			return ynodes; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 95 "pro.l"
+#line 94 "pro.l"
 {yylval.znodes = splitnodez(yytext);
 			return znodes; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 97 "pro.l"
+#line 96 "pro.l"
 {yylval.beamx = splitbeamx(yytext);
 			return beamx; }
 	YY_BREAK
 case 7:
 /* rule 7 can match eol */
 YY_RULE_SETUP
-#line 99 "pro.l"
+#line 98 "pro.l"
 {yylval.beamy = splitbeamy(yytext);
 			return beamy; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 101 "pro.l"
+#line 100 "pro.l"
 ;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 103 "pro.l"
+#line 102 "pro.l"
 ECHO;
 	YY_BREAK
-#line 877 "lex.yy.c"
+#line 876 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1871,4 +1870,4 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 103 "pro.l"
+#line 102 "pro.l"

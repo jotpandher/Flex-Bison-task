@@ -4,7 +4,6 @@
 using namespace std;
 #define YY_DECL extern "C" int yylex()
 #include "pro.tab.h"
-#include "writer.h"
 float splitnodex( string s )
 {
 	string delimiter = "= ";
