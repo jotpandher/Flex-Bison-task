@@ -11,7 +11,7 @@ extern "C" FILE *yyin;
 
 void yyerror(const char *s);
 #define YYDEBUG 1
-//write_function s;
+write_function s;
 %}
 
 %union{
@@ -30,14 +30,13 @@ void yyerror(const char *s);
 
 FELT:
 	FELT srnum {cout<<"jot"<<endl;   } 
-	|FELT xnodes {cout<<""<<endl; }
-
+	|FELT xnodes {writeFeltFile_Joint_coordinates($2,'x') }
 	| FELT ynodes { cout<<""<<endl; }
 	| FELT znodes { cout<<""<<endl;}
 	| FELT beamx  { cout<< ""<<endl;}
 	| FELT beamy  {cout <<"" <<endl;}
 	| srnum  { cout<<" "<<endl;}
-	| xnodes  {cout<<""<<endl;}
+	| xnodes  {writeFeltFile_Joint_coordinates($1,'x');}
 	| ynodes        { cout<<""<<endl;}
 	| znodes {cout<<""<<endl;}
 	|beamx{ cout<<""<<endl;}
@@ -65,7 +64,7 @@ main()
 
 	yyparse();
 	} while (!feof(yyin));
-//	s.write_end_function("*", 70);
+	s.write_end_function("*", 70);
 
 }
 
