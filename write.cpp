@@ -1,5 +1,6 @@
 #include "write.h"
-write_function::write_function()
+	void write_function::write_function()
+	
 	{
 	write_end_function("*",70)
 	
@@ -32,4 +33,7 @@ void write_function::writeFeltFile_Joint_coordinates(float s, char nodes)
 	ofstream f(output_file.c_str(), ios::app);
 	if (nodes=='x')
 	f << s ;
-	}
+	else (nodes=='y')
+	f<< s;
+	if else (nodes=='z')
+	f<< s;}

@@ -11,7 +11,7 @@ extern "C" FILE *yyin;
 
 void yyerror(const char *s);
 #define YYDEBUG 1
-write_function s;
+//write_function s;
 %}
 
 %union{
@@ -22,21 +22,21 @@ write_function s;
 	float beamx;
 	float beamy;
 }
-%token	srnum;
-%token xnodes ynodes znodes;
-%token  beamx beamy;
+%token	<int> srnum;
+%token <float>xnodes ynodes znodes;
+%token  <float>beamx beamy;
 
 %%
 
 FELT:
 	FELT srnum {cout<<"jot"<<endl;   } 
-	|FELT xnodes {writeFeltFile_Joint_coordinates($2,'x') }
-	| FELT ynodes { cout<<""<<endl; }
-	| FELT znodes { cout<<""<<endl;}
-	| FELT beamx  { cout<< ""<<endl;}
-	| FELT beamy  {cout <<"" <<endl;}
-	| srnum  { cout<<" "<<endl;}
-	| xnodes  {writeFeltFile_Joint_coordinates($1,'x');}
+	|FELT xnodes {cout<<"jot"<<endl; }
+	| FELT ynodes { cout<<"hi"<<endl; }
+	| FELT znodes { cout<<"soo"<<endl;}
+	| FELT beamx  { cout<< "hii"<<endl;}
+	| FELT beamy  {cout <<"hehe" <<endl;}
+	| srnum  { cout<<""<<endl;}
+	| xnodes  {cout<<""<<endl;}
 	| ynodes        { cout<<""<<endl;}
 	| znodes {cout<<""<<endl;}
 	|beamx{ cout<<""<<endl;}
@@ -45,11 +45,9 @@ FELT:
 %%
 
 main()
-{	string file_name, input_file;
-	cout<<" Enter the name of input file:\n";
-	cin>>file_name;
+{
 
-	 FILE *text= fopen(input_file.c_str(), "r");
+	 FILE *text= fopen("beam.flt", "r");
  	if (!text) {
 		cout << "I can't open this file" << endl;
 		return -1;
@@ -64,7 +62,7 @@ main()
 
 	yyparse();
 	} while (!feof(yyin));
-	s.write_end_function("*", 70);
+//	s.write_end_function("*", 70);
 
 }
 

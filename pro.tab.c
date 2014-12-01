@@ -449,8 +449,8 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    32,    32,    33,    35,    36,    37,    38,    39,    40,
-      41,    42,    43,    44
+       0,    32,    32,    33,    34,    35,    36,    37,    38,    39,
+      40,    41,    42,    43
 };
 #endif
 
@@ -1230,66 +1230,66 @@ yyreduce:
 
   case 3:
 #line 33 "pro.y" /* yacc.c:1646  */
-    {cout<<""<<endl; }
+    {cout<<"jot"<<endl; }
 #line 1235 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 35 "pro.y" /* yacc.c:1646  */
-    { cout<<""<<endl; }
+#line 34 "pro.y" /* yacc.c:1646  */
+    { cout<<"hi"<<endl; }
 #line 1241 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 36 "pro.y" /* yacc.c:1646  */
-    { cout<<""<<endl;}
+#line 35 "pro.y" /* yacc.c:1646  */
+    { cout<<"soo"<<endl;}
 #line 1247 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 37 "pro.y" /* yacc.c:1646  */
-    { cout<< ""<<endl;}
+#line 36 "pro.y" /* yacc.c:1646  */
+    { cout<< "hii"<<endl;}
 #line 1253 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 38 "pro.y" /* yacc.c:1646  */
-    {cout <<"" <<endl;}
+#line 37 "pro.y" /* yacc.c:1646  */
+    {cout <<"hehe" <<endl;}
 #line 1259 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 39 "pro.y" /* yacc.c:1646  */
-    { cout<<" "<<endl;}
+#line 38 "pro.y" /* yacc.c:1646  */
+    { cout<<""<<endl;}
 #line 1265 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 40 "pro.y" /* yacc.c:1646  */
+#line 39 "pro.y" /* yacc.c:1646  */
     {cout<<""<<endl;}
 #line 1271 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 41 "pro.y" /* yacc.c:1646  */
+#line 40 "pro.y" /* yacc.c:1646  */
     { cout<<""<<endl;}
 #line 1277 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 42 "pro.y" /* yacc.c:1646  */
+#line 41 "pro.y" /* yacc.c:1646  */
     {cout<<""<<endl;}
 #line 1283 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 43 "pro.y" /* yacc.c:1646  */
+#line 42 "pro.y" /* yacc.c:1646  */
     { cout<<""<<endl;}
 #line 1289 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 44 "pro.y" /* yacc.c:1646  */
+#line 43 "pro.y" /* yacc.c:1646  */
     { cout<< ""<<endl;}
 #line 1295 "pro.tab.c" /* yacc.c:1646  */
     break;
@@ -1523,15 +1523,13 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 46 "pro.y" /* yacc.c:1906  */
+#line 45 "pro.y" /* yacc.c:1906  */
 
 
 main()
-{	string file_name, input_file;
-	cout<<" Enter the name of input file:\n";
-	cin>>file_name;
+{
 
-	 FILE *text= fopen(input_file.c_str(), "r");
+	 FILE *text= fopen("beam.flt", "r");
  	if (!text) {
 		cout << "I can't open this file" << endl;
 		return -1;
