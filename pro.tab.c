@@ -1224,61 +1224,61 @@ yyreduce:
     {
         case 2:
 #line 32 "pro.y" /* yacc.c:1646  */
-    {cout<<"jot"<<endl;   }
+    {cout<<(yyvsp[0].int)<<endl;   }
 #line 1229 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
 #line 33 "pro.y" /* yacc.c:1646  */
-    {cout<<"jot"<<endl; }
+    {cout<<(yyvsp[0].float)<<endl; }
 #line 1235 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
 #line 34 "pro.y" /* yacc.c:1646  */
-    { cout<<"hi"<<endl; }
+    { cout<<(yyvsp[0].float)<<endl; }
 #line 1241 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
 #line 35 "pro.y" /* yacc.c:1646  */
-    { cout<<"soo"<<endl;}
+    { cout<<(yyvsp[0].float)<<endl;}
 #line 1247 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
 #line 36 "pro.y" /* yacc.c:1646  */
-    { cout<< "hii"<<endl;}
+    { cout<< (yyvsp[0].float)<<endl;}
 #line 1253 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
 #line 37 "pro.y" /* yacc.c:1646  */
-    {cout <<"hehe" <<endl;}
+    {cout <<(yyvsp[0].float) <<endl;}
 #line 1259 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
 #line 38 "pro.y" /* yacc.c:1646  */
-    { cout<<""<<endl;}
+    { cout<<(yyvsp[0].int)<<endl;}
 #line 1265 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
 #line 39 "pro.y" /* yacc.c:1646  */
-    {cout<<""<<endl;}
+    {cout<<(yyvsp[0].float)<<endl;}
 #line 1271 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
 #line 40 "pro.y" /* yacc.c:1646  */
-    { cout<<""<<endl;}
+    { cout<<(yyvsp[0].float)<<endl;}
 #line 1277 "pro.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
 #line 41 "pro.y" /* yacc.c:1646  */
-    {cout<<""<<endl;}
+    {cout<<(yyvsp[0].float)<<endl;}
 #line 1283 "pro.tab.c" /* yacc.c:1646  */
     break;
 

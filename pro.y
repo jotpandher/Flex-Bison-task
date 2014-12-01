@@ -29,16 +29,16 @@ void yyerror(const char *s);
 %%
 
 FELT:
-	FELT srnum {cout<<"jot"<<endl;   } 
-	|FELT xnodes {cout<<"jot"<<endl; }
-	| FELT ynodes { cout<<"hi"<<endl; }
-	| FELT znodes { cout<<"soo"<<endl;}
-	| FELT beamx  { cout<< "hii"<<endl;}
-	| FELT beamy  {cout <<"hehe" <<endl;}
-	| srnum  { cout<<""<<endl;}
-	| xnodes  {cout<<""<<endl;}
-	| ynodes        { cout<<""<<endl;}
-	| znodes {cout<<""<<endl;}
+	FELT srnum {cout<<$2<<endl;   } 
+	|FELT xnodes {cout<<$2<<endl; }
+	| FELT ynodes { cout<<$2<<endl; }
+	| FELT znodes { cout<<$2<<endl;}
+	| FELT beamx  { cout<< $2<<endl;}
+	| FELT beamy  {cout <<$2 <<endl;}
+	| srnum  { cout<<$1<<endl;}
+	| xnodes  {cout<<$1<<endl;}
+	| ynodes        { cout<<$1<<endl;}
+	| znodes {cout<<$1<<endl;}
 	|beamx{ cout<<""<<endl;}
 	|beamy { cout<< ""<<endl;}
 
