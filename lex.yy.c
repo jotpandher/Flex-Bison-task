@@ -366,8 +366,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 9
-#define YY_END_OF_BUFFER 10
+#define YY_NUM_RULES 8
+#define YY_END_OF_BUFFER 9
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -375,11 +375,11 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[31] =
+static yyconst flex_int16_t yy_accept[29] =
     {   0,
-        0,    0,   10,    8,    1,    1,    8,    2,    8,    8,
-        8,    8,    0,    0,    0,    2,    0,    0,    0,    0,
-        0,    0,    0,    0,    7,    6,    3,    4,    5,    0
+        0,    0,    9,    7,    1,    1,    7,    7,    7,    7,
+        7,    0,    0,    0,    0,    0,    0,    0,    0,    0,
+        0,    0,    6,    5,    2,    3,    4,    0
     } ;
 
 static yyconst flex_int32_t yy_ec[256] =
@@ -420,40 +420,40 @@ static yyconst flex_int32_t yy_meta[13] =
         1,    1
     } ;
 
-static yyconst flex_int16_t yy_base[31] =
+static yyconst flex_int16_t yy_base[29] =
     {   0,
-        0,    0,   27,   53,   10,   53,   11,   18,   11,   18,
-       24,   30,    0,    0,   32,   17,    0,   36,    0,   39,
-        0,   41,    0,   43,    0,   45,   20,   19,   12,   53
+        0,    0,   23,   53,   10,   53,   11,   11,   18,   24,
+       30,    0,    0,   32,    0,   36,    0,   39,    0,   41,
+        0,   43,    0,   45,   20,   19,   12,   53
     } ;
 
-static yyconst flex_int16_t yy_def[31] =
+static yyconst flex_int16_t yy_def[29] =
     {   0,
-       30,    1,   30,   30,   30,   30,   30,   30,   30,   30,
-       30,   30,    5,    7,   30,   30,    9,   30,   10,   30,
-       11,   30,   12,   30,    5,   30,   20,   22,   24,    0
+       28,    1,   28,   28,   28,   28,   28,   28,   28,   28,
+       28,    5,    7,   28,    8,   28,    9,   28,   10,   28,
+       11,   28,    5,   28,   18,   20,   22,    0
     } ;
 
 static yyconst flex_int16_t yy_nxt[66] =
     {   0,
-        4,    4,    5,    6,    7,    8,    9,    4,    4,   10,
-       11,   12,   13,   23,   14,   14,   15,   17,   18,   19,
-       21,   19,   16,   16,   20,   21,   30,   30,   30,   30,
-       22,   23,   30,   30,   30,   30,   24,   15,   30,   30,
-       25,   26,   30,   18,   27,   20,   28,   22,   29,   24,
-       26,   17,    3,   30,   30,   30,   30,   30,   30,   30,
-       30,   30,   30,   30,   30
+        4,    4,    5,    6,    7,    4,    8,    4,    4,    9,
+       10,   11,   12,   21,   13,   13,   14,   15,   16,   17,
+       19,   17,   28,   28,   18,   19,   28,   28,   28,   28,
+       20,   21,   28,   28,   28,   28,   22,   14,   28,   28,
+       23,   24,   28,   16,   25,   18,   26,   20,   27,   22,
+       24,   15,    3,   28,   28,   28,   28,   28,   28,   28,
+       28,   28,   28,   28,   28
     } ;
 
 static yyconst flex_int16_t yy_chk[66] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    5,   29,    5,    7,    7,    9,    9,   10,
-       28,   27,   16,    8,   10,   11,    3,    0,    0,    0,
-       11,   12,    0,    0,    0,    0,   12,   15,    0,    0,
-       15,   18,    0,   18,   20,   20,   22,   22,   24,   24,
-       26,   26,   30,   30,   30,   30,   30,   30,   30,   30,
-       30,   30,   30,   30,   30
+        1,    1,    5,   27,    5,    7,    7,    8,    8,    9,
+       26,   25,    3,    0,    9,   10,    0,    0,    0,    0,
+       10,   11,    0,    0,    0,    0,   11,   14,    0,    0,
+       14,   16,    0,   16,   18,   18,   20,   20,   22,   22,
+       24,   24,   28,   28,   28,   28,   28,   28,   28,   28,
+       28,   28,   28,   28,   28
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -476,8 +476,9 @@ char *yytext;
 #include <string>
 using namespace std;
 #define YY_DECL extern "C" int yylex()
+
 #include "pro.tab.h"
-float splitnodes( string s )
+float splitnodex( string s )
 {
 	string delimiter = "= ";
 
@@ -490,6 +491,34 @@ float splitnodes( string s )
 	t = atof(s.c_str());
 	return t;
 }
+float splitnodey( string s )
+{
+        string delimiter = "= ";
+
+        size_t pos = 0;
+        while ((pos = s.find(delimiter)) != string::npos)
+        {
+                s.erase(0, pos + delimiter.length());
+        }
+        float t;
+        t = atof(s.c_str());
+        return t;
+}
+
+float splitnodez( string s )
+{
+        string delimiter = "= ";
+
+        size_t pos = 0;
+        while ((pos = s.find(delimiter)) != string::npos)
+        {
+                s.erase(0, pos + delimiter.length());
+        }
+        float t;
+        t = atof(s.c_str());
+        return t;
+}
+
 float splitbeamx( string s )
 {
         string delimiter = "[ ";
@@ -518,7 +547,7 @@ float splitbeamy( string s )
         return t;
 }
 
-#line 522 "lex.yy.c"
+#line 551 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -705,10 +734,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 57 "pro.l"
+#line 86 "pro.l"
 
 
-#line 712 "lex.yy.c"
+#line 741 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -761,7 +790,7 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 31 )
+				if ( yy_current_state >= 29 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -794,57 +823,51 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 59 "pro.l"
+#line 88 "pro.l"
 
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 60 "pro.l"
-{yylval.srnum = atoi(yytext);
-			return srnum; }
+#line 90 "pro.l"
+{ yylval.xnodes = splitnodex(yytext);
+			return xnodes; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 62 "pro.l"
-{ yylval.xnodes = splitnodes(yytext);
-			return xnodes; }
+#line 92 "pro.l"
+{yylval.ynodes = splitnodey(yytext);
+			return ynodes; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 64 "pro.l"
-{yylval.ynodes = splitnodes(yytext);
-			return ynodes; }
+#line 94 "pro.l"
+{yylval.znodes = splitnodez(yytext);
+			return znodes; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 66 "pro.l"
-{yylval.znodes = splitnodes(yytext);
-			return znodes; }
-	YY_BREAK
-case 6:
-YY_RULE_SETUP
-#line 68 "pro.l"
+#line 96 "pro.l"
 {yylval.beamx = splitbeamx(yytext);
 			return beamx; }
 	YY_BREAK
-case 7:
-/* rule 7 can match eol */
+case 6:
+/* rule 6 can match eol */
 YY_RULE_SETUP
-#line 70 "pro.l"
+#line 98 "pro.l"
 {yylval.beamy = splitbeamy(yytext);
 			return beamy; }
 	YY_BREAK
-case 8:
+case 7:
 YY_RULE_SETUP
-#line 72 "pro.l"
+#line 100 "pro.l"
 ;
 	YY_BREAK
-case 9:
+case 8:
 YY_RULE_SETUP
-#line 74 "pro.l"
+#line 102 "pro.l"
 ECHO;
 	YY_BREAK
-#line 848 "lex.yy.c"
+#line 871 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1136,7 +1159,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 31 )
+			if ( yy_current_state >= 29 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1164,11 +1187,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 31 )
+		if ( yy_current_state >= 29 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 30);
+	yy_is_jam = (yy_current_state == 28);
 
 	return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1842,4 +1865,4 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 74 "pro.l"
+#line 102 "pro.l"

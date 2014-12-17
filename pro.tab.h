@@ -45,12 +45,11 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    srnum = 258,
-    xnodes = 259,
-    ynodes = 260,
-    znodes = 261,
-    beamx = 262,
-    beamy = 263
+    xnodes = 258,
+    ynodes = 259,
+    znodes = 260,
+    beamx = 261,
+    beamy = 262
   };
 #endif
 
@@ -59,16 +58,16 @@ extern int yydebug;
 typedef union YYSTYPE YYSTYPE;
 union YYSTYPE
 {
-#line 17 "pro.y" /* yacc.c:1909  */
+#line 16 "pro.y" /* yacc.c:1909  */
 
-	int  srnum;
+	
 	float xnodes;
 	float ynodes;
 	float znodes;
 	float beamx;
 	float beamy;
 
-#line 72 "pro.tab.h" /* yacc.c:1909  */
+#line 71 "pro.tab.h" /* yacc.c:1909  */
 };
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
